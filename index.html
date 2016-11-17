@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hello World using AngularJS</title>
+    <meta charset="UTF-8">
+    <meta http-equi="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap: Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+    	html, body, input {
+    		font-size: 1.05em !important;
+		}
+		.navbar {
+    		margin-bottom: 0%;
+		}
+		.navbar-header {
+    		font-size: 1.2em;
+    		color:  #000000;
+    		padding-top: 15px;
+    		padding-bottom: 15px;
+		}
+		.home{
+			margin-top: 10%;
+		}
+		#main {
+			font-size: 2em;
+		}
+    </style>
+
+</head>
+<body ng-app="helloWorld">
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    Hello World Using AngularJS
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+    	<div ng-controller="homeController" class="col-md-6 col-md-offset-3 home">
+    		<form name="myform">
+    		<label>Enter name to greet</label>
+        	<input type="text" name="greetName" ng-model="name">
+       		</form>
+        	<div id="main">Hello {{name}}!</div>
+        </div>
+    </div>
+
+    <!-- Download AngularJS via CDN -->
+    <script src="https://code.angularjs.org/1.5.7/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
